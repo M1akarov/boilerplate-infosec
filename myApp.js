@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
+const helmet = require('helmet'); // ← добавь эту строку
 
+app.use(helmet());
 
 
 
