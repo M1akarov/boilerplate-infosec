@@ -17,6 +17,13 @@ app.use(helmet.hsts({
 	force: true
 }));
 
+app.use(helmet.contentSecurityPolicy({
+  directives: {
+    defaultSrc: ["'self'"],
+    scriptSrc: ["'self'", "trusted-cdn.com"]
+  }
+}));
+
 
 
 
